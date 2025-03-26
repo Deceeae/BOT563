@@ -8,3 +8,33 @@ R Script:
 tree <- read.tree(file="/Users/chenjunyan/downloads/muscleplantNMTshort.fasta.contree")
 plot(tree, show.node.label=TRUE)
 title("plantnmt distance tree(ML)")
+
+
+Software: IQ Tree
+
+Description: IQ-TREE is a maximum-likelihood (ML) phylogenetic inference program that combines fast hill-climbing tree searches (via NNI 
+rearrangements) with a stochastic “perturbation” step to escape local optima. It starts by generating multiple initial trees (e.g., 
+from maximum parsimony) and refines them using both deterministic (hill-climbing) and random (stochastic NNI) steps, ultimately reporting 
+the best-scoring ML tree found.
+
+Strength: Efficient Search: Uses a combination of deterministic and stochastic strategies (hill-climbing + stochastic NNI) to explore 
+tree-space effectively. High Likelihoods: Often finds better or at least comparable likelihoods than other ML programs (e.g.,
+RAxML, PhyML) within similar or modestly higher run times.  Flexible Stopping Rule: Includes built-in stopping criteria that can save 
+computation time while still achieving high-likelihood trees. Performance Optimizations: Implements a “phylogenetic likelihood library”
+to speed up likelihood calculations. 
+
+Weakness: NNI-Focused: Relies on nearest-neighbor interchanges (NNI); in some cases, SPR- or TBR-based methods might explore certain topological
+neighborhoods more thoroughly (though stochastic NNI helps mitigate this). Heuristic Nature: Like all heuristic methods, there is no strict 
+guarantee of reaching the global optimum. Potential Longer Runs: The default stopping rule may lead to longer runs on certain alignments if the
+tree space is especially large or complex.
+
+Assumption: Model Adequacy: Assumes the substitution model (e.g., GTR+Γ for nucleotides, WAG+Γ for proteins) is reasonably suitable for the data. 
+Accurate Alignment: Requires a quality multiple sequence alignment of homologous sequences (errors or biases in the alignment can impact the result).
+Sufficient Variation: Phylogenetic signal must be present in the data for ML inference to converge on meaningful trees. 
+
+User Choices: Substitution Model: Users can choose from various site-substitution models (GTR, WAG, etc.) and rate heterogeneity options (Γ, +I, etc.)
+
+
+
+
+
