@@ -1,0 +1,10 @@
+Bash Script:
+
+iqtree2 -s muscleplantNMTshort.fasta -B 1000  
+
+
+R Script:
+
+tree <- read.tree(file="/Users/chenjunyan/downloads/muscleplantNMTshort.fasta.contree")
+plot(tree, show.node.label=TRUE)
+title("plantnmt distance tree(ML)")
