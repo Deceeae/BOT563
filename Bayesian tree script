@@ -53,4 +53,4 @@ begin mrbayes;
 end;
 
 
-execute algaemb.nex (in terminal
+execute my file
