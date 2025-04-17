@@ -7,8 +7,8 @@ BEGIN TAXA;
              HORVU.MOREX.r3.1HG0003780.1
              HORVU.MOREX.r3.3HG0224510.1
              XBD97128.1
-             Solyc10G000008|Solyc10T000008.1
-             Solyc03G001639|Solyc03T001639.1
+             Solyc10G000008
+             Solyc03G001639
              Bradi2g02390.1
              Bradi1g14870.1
              AT5G54160.1
@@ -18,7 +18,7 @@ BEGIN TAXA;
              NP_002677.1
 ;
 END;
-BEGIN CHARACTERS;
+BEGIN Data;
        DIMENSIONS NCHAR=442;
        FORMAT MISSING=? GAP=- MATCHCHAR=. datatype=protein;
 MATRIX
@@ -43,8 +43,8 @@ begin mrbayes;
  set autoclose=yes;
  prset brlenspr=unconstrained:exp(10.0);
  prset shapepr=exp(1.0);
- prset tratiopr=beta(1.0,1.0);
- prset statefreqpr=dirichlet(1.0,1.0,1.0,1.0);
+ prset tratiopr=beta(1.0,1.0)(This was for base pair only);
+ prset statefreqpr=dirichlet(1.0,1.0,1.0,1.0) (This was for base pair only);
  lset nst=2 rates=gamma ngammacat=4;
  mcmcp ngen=10000 samplefreq=10 printfreq=100 nruns=1 nchains=3 savebrlens=yes;
  outgroup Anacystis_nidulans;
