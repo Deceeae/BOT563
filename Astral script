@@ -1,2 +1,16 @@
 conda install -c bioconda astral
 java -jar __astral.jar__ -i astral-bs10-speices.tre -o astral-bs10-speices.tre 2     
+
+
+Strengths: ASTRAL-III is statistically consistent under the multi-species coalescent (MSC) model and significantly improves scalability, 
+with a guaranteed polynomial running time of  𝑂 ( 𝐷 ( 𝑛 𝑘 ) 1.726 ) O(D(nk)  1.726  ). It efficiently handles both binary and multifurcating
+gene trees, incorporates polytomies, and allows contraction of low-support branches to enhance accuracy.
+
+Weaknesses: The method is sensitive to gene tree estimation errors and does not use branch lengths or nucleotide substitution models. 
+Overly aggressive filtering of gene trees can reduce accuracy.
+
+Assumptions: It assumes that discordance among gene trees is primarily due to ILS rather than processes like hybridization or gene duplication.
+It also presumes that input trees are unrooted and represent homologous loci
+
+User Choices: Users must decide whether to contract low-support branches (typically below 10% bootstrap is recommended), select which gene trees
+to include (e.g., maximum likelihood trees or posterior samples), and optionally tune trimming parameters such as α for heuristic pruning.
