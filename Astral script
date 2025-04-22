@@ -1,0 +1,2 @@
+conda install -c bioconda astral
+java -jar __astral.jar__ -i astral-bs10-speices.tre -o astral-bs10-speices.tre 2     
