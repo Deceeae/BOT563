@@ -1,0 +1,3 @@
+/Users/chenjunyan/Downloads/clustalw -ALIGN -INFILE=my file.fasta -OUTFILE=my file -clustalw_aligned.fasta -OUTPUT=FASTA (We do not change any parameter here, using defaut ones)
+
+/Users/chenjunyan/Downloads/muscle -align my file.fa - my file_muscle_aligned.afa (We do not change any parameter here, using defaut ones)
